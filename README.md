@@ -11,7 +11,7 @@ A clean, fast, and open-source script to identify and unfollow users who do not 
 ## 🖥️ How to use
 1. **Visit:** Open the [Web Interface](https://timuc7n.github.io/Threads-Unfollowers/).
 2. **Copy:** Click the "Copy" button to get the latest script code.
-3. **Execute:** Go to [Threads.net](https://threads.net), open your browser's **Developer Console** (`F12`), paste the code, and press **Enter**.
+3. **Execute:** Go to [Threads.com](https://threads.com), open your browser's **Developer Console** (`F12`), paste the code, and press **Enter**.
 
 ## 📸 Preview
 *Click to enlarge images.*
