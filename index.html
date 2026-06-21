@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ── Reset ── */
+    
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -31,11 +31,11 @@
       --radius:      14px;
       --radius-sm:   8px;
 
-      /* TR is default — reddish tint */
+      
       --lang-glow: rgba(220,50,50,0.035);
     }
 
-    /* Accessibility: Focus visible */
+    
     :focus-visible {
       outline: 2px solid var(--accent2);
       outline-offset: 2px;
@@ -43,7 +43,7 @@
 
     html { scroll-behavior: smooth; }
 
-    /* Accessibility: Reduced motion */
+    
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
         animation-duration: 0.01ms !important;
@@ -63,7 +63,7 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Background mesh — fixed, subtle */
+    
     body::before {
       content: '';
       position: fixed;
@@ -75,7 +75,7 @@
       z-index: 0;
     }
 
-    /* Language tint overlay */
+    
     body::after {
       content: '';
       position: fixed;
@@ -94,9 +94,7 @@
       z-index: 1;
     }
 
-    /* ═══════════════════════════════
-       LANGUAGE BAR
-    ═══════════════════════════════ */
+    
     .lang-bar {
       display: flex;
       justify-content: center;
@@ -123,7 +121,7 @@
       -webkit-user-select: none;
     }
 
-    /* TR — red tint */
+    
     #btn-tr.active,
     #btn-tr:hover {
       border-color: rgba(210, 45, 45, 0.55);
@@ -132,7 +130,7 @@
       box-shadow: 0 0 18px rgba(210, 45, 45, 0.15);
     }
 
-    /* EN — blue tint */
+    
     #btn-en.active,
     #btn-en:hover {
       border-color: rgba(56, 124, 235, 0.55);
@@ -141,7 +139,7 @@
       box-shadow: 0 0 18px rgba(56, 124, 235, 0.15);
     }
 
-    /* TR starts active on load */
+    
     #btn-tr {
       border-color: rgba(210, 45, 45, 0.55);
       background: rgba(210, 45, 45, 0.1);
@@ -159,9 +157,7 @@
       display: block;
     }
 
-    /* ═══════════════════════════════
-       HERO
-    ═══════════════════════════════ */
+    
     .hero {
       text-align: center;
       padding: 52px 0 42px;
@@ -234,18 +230,14 @@
 
     .threads-btn:active { transform: translateY(0); }
 
-    /* ═══════════════════════════════
-       DIVIDER
-    ═══════════════════════════════ */
+    
     .divider {
       height: 1px;
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
       margin: 4px 0 50px;
     }
 
-    /* ═══════════════════════════════
-       SECTION LABELS
-    ═══════════════════════════════ */
+    
     .section-label {
       font-size: 10.5px;
       font-weight: 700;
@@ -272,9 +264,7 @@
       max-width: 560px;
     }
 
-    /* ═══════════════════════════════
-       CODE BLOCK
-    ═══════════════════════════════ */
+    
     .code-section {
       background: var(--bg2);
       border: 1px solid var(--border2);
@@ -354,9 +344,7 @@
     .cm  { color: #585b70; font-style: italic; }
     .num { color: #fab387; }
 
-    /* ═══════════════════════════════
-       ALLOW PASTING TIP
-    ═══════════════════════════════ */
+    
     .tip-box {
       display: flex;
       align-items: flex-start;
@@ -392,9 +380,7 @@
       font-size: 11.5px;
     }
 
-    /* ═══════════════════════════════
-       HOW TO — DEVICE TABS
-    ═══════════════════════════════ */
+    
     .device-tabs {
       display: flex;
       gap: 8px;
@@ -428,7 +414,7 @@
     .device-content { display: none; }
     .device-content.active { display: flex; flex-direction: column; gap: 10px; }
 
-    /* Step cards */
+    
     .step-item {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -482,7 +468,7 @@
       font-size: 11px;
     }
 
-    /* "May not appear" badge */
+    
     .optional-badge {
       display: inline-block;
       font-size: 10px;
@@ -497,9 +483,7 @@
       letter-spacing: 0.02em;
     }
 
-    /* ═══════════════════════════════
-       OPEN SOURCE — 3 CARDS
-    ═══════════════════════════════ */
+    
     .os-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -550,9 +534,7 @@
       .os-grid { grid-template-columns: 1fr; gap: 10px; }
     }
 
-    /* ═══════════════════════════════
-       DISCLAIMER
-    ═══════════════════════════════ */
+    
     .disclaimer {
       border-radius: var(--radius);
       overflow: hidden;
@@ -608,9 +590,7 @@
       line-height: 1.62;
     }
 
-    /* ═══════════════════════════════
-       FOOTER
-    ═══════════════════════════════ */
+    
     footer {
       border-top: 1px solid var(--border);
       padding: 28px 0;
@@ -632,9 +612,7 @@
       color: var(--text3);
     }
 
-    /* ═══════════════════════════════
-       SCROLL ANIMATION
-    ═══════════════════════════════ */
+    
     .fade-up {
       opacity: 0;
       transform: translateY(20px);
@@ -642,9 +620,7 @@
     }
     .fade-up.visible { opacity: 1; transform: none; }
 
-    /* ═══════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════ */
+    
     @media (max-width: 600px) {
       .lang-btn { padding: 7px 14px 7px 8px; font-size: 13px; }
       pre { font-size: 11px; padding: 16px; }
@@ -657,10 +633,10 @@
 
 <div class="container">
 
-  <!-- LANGUAGE BAR -->
+  
   <div class="lang-bar">
     <button class="lang-btn active" id="btn-tr" onclick="setLang('tr')" aria-label="Türkçe">
-      <!-- Turkey flag -->
+      
       <svg class="flag-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="20" fill="#E30A17"/>
         <circle cx="17.5" cy="20" r="8" fill="#fff"/>
@@ -672,7 +648,7 @@
     </button>
 
     <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-label="English">
-      <!-- UK flag -->
+      
       <svg class="flag-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
         <defs><clipPath id="circ"><circle cx="20" cy="20" r="20"/></clipPath></defs>
         <circle cx="20" cy="20" r="20" fill="#012169"/>
@@ -691,7 +667,7 @@
     </button>
   </div>
 
-  <!-- HERO -->
+  
   <section class="hero fade-up">
     <div class="logo-wrap">
       <img
@@ -721,7 +697,7 @@
 
   <div class="divider"></div>
 
-  <!-- ═══ 01 — CODE ═══ -->
+  
   <section class="fade-up">
     <p class="section-label" data-tr="01 — Tarayıcı Scripti" data-en="01 — Browser Script">01 — Tarayıcı Scripti</p>
     <h2 class="section-title" data-tr="Kodu Kopyala" data-en="Copy the Code">Kodu Kopyala</h2>
@@ -753,17 +729,17 @@
     </div>
   </section>
 
-  <!-- ═══ ALLOW PASTING TIP ═══ -->
+  
   <section class="fade-up">
     <div class="tip-box">
       <div class="tip-icon">💡</div>
       <div id="tip-content">
-        <!-- Content gets injected by injectInlineCode() -->
+        
       </div>
     </div>
   </section>
 
-  <!-- ═══ 02 — HOW TO ═══ -->
+  
   <section class="fade-up">
     <p class="section-label" data-tr="02 — Kullanım" data-en="02 — How to Use">02 — Kullanım</p>
     <h2 class="section-title" data-tr="Adım Adım Rehber" data-en="Step-by-Step Guide">Adım Adım Rehber</h2>
@@ -782,7 +758,7 @@
       </button>
     </div>
 
-    <!-- Desktop -->
+    
     <div class="device-content active" id="content-desktop">
 
       <div class="step-item">
@@ -813,7 +789,7 @@
             <span class="optional-badge" data-tr="Herkeste çıkmaz" data-en="Not always needed">Herkeste çıkmaz</span>
           </strong>
           <p id="d3-p">
-            <!-- Injected by injectInlineCode -->
+            
           </p>
         </div>
       </div>
@@ -823,14 +799,14 @@
         <div class="step-text">
           <strong data-tr="Yapıştırın ve Enter'a basın" data-en="Paste and press Enter">Yapıştırın ve Enter'a basın</strong>
           <p id="d4-p">
-             <!-- Injected by injectInlineCode -->
+             
           </p>
         </div>
       </div>
 
     </div>
 
-    <!-- Mobile -->
+    
     <div class="device-content" id="content-mobile">
 
       <div class="step-item">
@@ -871,7 +847,7 @@
             <span class="optional-badge" data-tr="Herkeste çıkmaz" data-en="Not always needed">Herkeste çıkmaz</span>
           </strong>
           <p id="m4-p">
-             <!-- Injected by injectInlineCode -->
+             
           </p>
         </div>
       </div>
@@ -891,7 +867,7 @@
     <div style="height: 48px"></div>
   </section>
 
-  <!-- ═══ 03 — OPEN SOURCE ═══ -->
+  
   <section class="fade-up">
     <p class="section-label" data-tr="03 — Açık Kaynak" data-en="03 — Open Source">03 — Açık Kaynak</p>
     <h2 class="section-title" data-tr="Özgürce Kullan, Paylaş, Geliştir" data-en="Use, Share & Improve Freely">Özgürce Kullan, Paylaş, Geliştir</h2>
@@ -926,7 +902,7 @@
     </div>
   </section>
 
-  <!-- ═══ 04 — DISCLAIMER ═══ -->
+  
   <section class="fade-up">
     <p class="section-label" data-tr="04 — Sorumluluk" data-en="04 — Disclaimer">04 — Sorumluluk</p>
     <div class="disclaimer">
@@ -958,7 +934,6 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-name">Threads Unfollowers</div>
@@ -969,9 +944,7 @@
 </footer>
 
 <script>
-/* ═══════════════════════════════════════
-   SCRIPTS — TR & EN
-═══════════════════════════════════════ */
+
 const SCRIPTS = {
   tr: `(async function () {
     'use strict';
@@ -2111,9 +2084,6 @@ const SCRIPTS = {
 })();`
 };
 
-/* ═══════════════════════════════════════
-   LANGUAGE
-═══════════════════════════════════════ */
 let currentLang = 'tr';
 
 function setLang(lang) {
@@ -2122,23 +2092,18 @@ function setLang(lang) {
   document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 
-  // Background tint
   const glow = lang === 'tr'
     ? 'rgba(220,50,50,0.035)'
     : 'rgba(56,124,235,0.035)';
   document.documentElement.style.setProperty('--lang-glow', glow);
 
-  // Translate all [data-tr] elements
   document.querySelectorAll('[data-tr]').forEach(el => {
-    // Sadece "allow pasting yazın" vb. inline child element'i olan yerleri textContent'in
-    // silmemesi için bu class'ları özel koruyacağız veya dataset'ten metni çekeceğiz.
+
     el.textContent = el.dataset[lang] || el.dataset['tr'];
   });
 
-  // Re-inject inline <code> snippets that textContent wiped
   injectInlineCode(lang);
 
-  // html lang + title
   document.documentElement.lang = lang;
   document.title = lang === 'tr'
     ? 'Threads Unfollowers — Takip Etmeyenleri Bul'
@@ -2149,8 +2114,7 @@ function setLang(lang) {
 }
 
 function injectInlineCode(lang) {
-  
-  // 1. Tip Box Content
+
   const tipContent = document.getElementById('tip-content');
   if (tipContent) {
     if (lang === 'tr') {
@@ -2168,7 +2132,6 @@ function injectInlineCode(lang) {
     }
   }
 
-  // 2. Desktop step 3
   const d3 = document.getElementById('d3-p');
   if (d3) {
     d3.innerHTML = lang === 'tr'
@@ -2176,7 +2139,6 @@ function injectInlineCode(lang) {
       : 'Chrome may warn you the first time you paste. Type <code>allow pasting</code> in the console and press Enter. This only needs to be done once.';
   }
 
-  // 3. Desktop step 4
   const d4 = document.getElementById('d4-p');
   if (d4) {
     d4.innerHTML = lang === 'tr'
@@ -2184,7 +2146,6 @@ function injectInlineCode(lang) {
       : 'Paste the copied script into the console (Windows/Linux: <code>Ctrl+V</code>, Mac: <code>Cmd+V</code>) and press Enter. The script runs automatically, lists non-followers and asks for confirmation.';
   }
 
-  // 4. Mobile step 4
   const m4 = document.getElementById('m4-p');
   if (m4) {
     m4.innerHTML = lang === 'tr'
@@ -2192,15 +2153,11 @@ function injectInlineCode(lang) {
       : 'If the console blocks pasting, type <code>allow pasting</code> and press Send. This is a one-time step.';
   }
 
-  // 5. Disclaimer list
   document.querySelectorAll('#disclaimer-list li[data-tr]').forEach(li => {
     li.textContent = li.dataset[lang] || li.dataset['tr'];
   });
 }
 
-/* ═══════════════════════════════════════
-   CODE RENDER
-═══════════════════════════════════════ */
 function esc(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
@@ -2224,9 +2181,6 @@ function renderCode(lang) {
   document.getElementById('code-display').innerHTML = highlight(SCRIPTS[lang]);
 }
 
-/* ═══════════════════════════════════════
-   COPY
-═══════════════════════════════════════ */
 function copyCode() {
   const text = SCRIPTS[currentLang];
   const finish = () => {
@@ -2267,9 +2221,6 @@ function resetCopyBtn() {
     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>`;
 }
 
-/* ═══════════════════════════════════════
-   DEVICE TAB
-═══════════════════════════════════════ */
 function switchDevice(d) {
   ['desktop','mobile'].forEach(x => {
     document.getElementById('tab-'+x).classList.toggle('active', x===d);
@@ -2277,9 +2228,6 @@ function switchDevice(d) {
   });
 }
 
-/* ═══════════════════════════════════════
-   SCROLL ANIMATION
-═══════════════════════════════════════ */
 const observer = new IntersectionObserver(entries => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
@@ -2291,13 +2239,8 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-/* ═══════════════════════════════════════
-   INIT — TR is default
-═══════════════════════════════════════ */
-// Apply TR tint immediately (no flicker)
 document.documentElement.style.setProperty('--lang-glow', 'rgba(220,50,50,0.035)');
 
-// Prevent logo drag
 const logo = document.getElementById('threads-logo');
 if (logo) {
   logo.addEventListener('dragstart', e => e.preventDefault());
